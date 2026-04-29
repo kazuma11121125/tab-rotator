@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Smart Idle Rotator",
+  "version": "1.0",
+  "description": "1分間操作がない時にタブを巡回します",
+  "permissions": ["tabs", "idle", "storage"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 180px; padding: 15px; font-family: sans-serif; }
+    .controls { display: flex; flex-direction: column; gap: 10px; }
+    input { padding: 5px; }
+    button { padding: 8px; cursor: pointer; border: none; border-radius: 4px; }
+    #start { background: #4CAF50; color: white; }
+    #stop { background: #f44336; color: white; }
+    #status { margin: 10px 0 12px; font-size: 13px; font-weight: 600; }
+    #status::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; background: currentColor; vertical-align: middle; }
+    #status[data-state="waiting"] { color: #a16207; }
+    #status[data-state="running"] { color: #1b7f3a; }
+    #status[data-state="stopped"] { color: #9b1c1c; }
+  </style>
+</head>
+<body>
+  <h3>巡回設定</h3>
+  <div id="status" data-state="stopped">状態: 確認中...</div>
+  <div class="controls">
+    <label><input type="number" id="interval" value="5" min="1"> 秒間隔</label>
+    <button id="start">開始（自動待機）</button>
+    <button id="stop">完全に停止</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
