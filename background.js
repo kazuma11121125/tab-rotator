@@ -34,7 +34,7 @@ chrome.idle.onStateChanged.addListener((newState) => {
   if (!isEnabled) return;
 
   if (newState === "idle") {
-    console.log("60秒の無操作を検知：巡回を開始します");
+    console.log("15秒の無操作を検知：巡回を開始します");
     startRotation();
   } else {
     console.log("操作を検知：巡回を停止しました");
